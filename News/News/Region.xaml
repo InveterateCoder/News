@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News"
+             x:Class="News.Region">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button Text="Отмена" Clicked="Cancel_Clicked" HorizontalOptions="Center"
+                    VerticalOptions="Start" BackgroundColor="Transparent" TextColor="Accent"/>
+            <ListView ItemTapped="RgnItemTaped">
+                <ListView.ItemsSource>
+                    <x:Array Type="{Type local:NewsInfo}">
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Barnaul/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Алтайский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Blagoveshchensk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Амурская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Arhangelsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Архангельская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Astrahan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Астраханская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Belgorod/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Белгородская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Bryansk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Брянская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Vladimir/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Владимирская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Volgograd/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Волгоградская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Vologda/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Вологодская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Voronezh/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Воронежская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Birobidgan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Еврейская автономная область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Chita/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Забайкальский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Ivanovo/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ивановская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Irkutsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Иркутская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Nalchik/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Кабардино-Балкарская Республика</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kaliningrad/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Калининградская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kaluga/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Калужская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Petropavlovsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Камчатский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Cherkessk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Карачаево-Черкесская Республика</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kemerovo/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Кемеровская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kirov/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Кировская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kostroma/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Костромская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Krasnodar/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Краснодарский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Krasnoyarsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Красноярский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kurgan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Курганская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kursk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Курская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Saint-Petersburg_and_Leningrad_Oblast/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ленинградская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Lipetsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Липецкая область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Magadan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Магаданская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Moscow/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Москва</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Moscow_and_Moscow_Oblast/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Московская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Murmansk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Мурманская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Nizhny_Novgorod/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Нижегородская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Veliky_Novgorod/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Новгородская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Novosibirsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Новосибирская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Omsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Омская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Orenburg/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Оренбургская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Orel/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Орловская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Penza/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Пензенская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Perm/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Пермский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Vladivostok/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Приморский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Pskov/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Псковская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Maykop/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Адыгея</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Gorno-Altaysk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Алтай</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Ufa/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Башкортостан</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Ulan-Ude/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Бурятия</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Makhachkala/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Дагестан</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Republic_of_Ingushetia/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Ингушетия</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Petrozavodsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Карелия</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Syktyvkar/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Коми</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Republic_of_Crimea/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Крым</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Yoshkar-Ola/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Марий Эл</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Saransk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Мордовия</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Yakutsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Саха (Якутия)</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Vladikavkaz/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Северная Осетия — Алания</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Kazan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Татарстан</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Abakan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Республика Хакасия</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Rostov-na-Donu/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ростовская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Ryazan/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Рязанская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Samara/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Самарская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Saint_Petersburg/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Санкт-Петербург</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Saratov/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Саратовская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Yuzhno-Sakhalinsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Сахалинская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Yekaterinburg/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Свердловская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Sevastopol/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Севастополь</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Smolensk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Смоленская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Stavropol/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ставропольский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Tambov/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Тамбовская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Tver/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Тверская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Tomsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Томская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Tula/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Тульская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Tyumen/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Тюменская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Izhevsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Удмуртская Республика</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Ulyanovsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ульяновская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Khabarovsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Хабаровский край</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Khanty-Mansiysk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ханты-Мансийский автономный округ</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Chelyabinsk/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Челябинская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Grozniy/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Чеченская Республика</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Cheboksary/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Чувашская Республика</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Salekhard/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ямало-Ненецкий автономный округ</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                        <local:NewsInfo>
+                            <local:NewsInfo.Address>https://news.yandex.ru/Yaroslavl/index.rss</local:NewsInfo.Address>
+                            <local:NewsInfo.Description>Ярославская область</local:NewsInfo.Description>
+                        </local:NewsInfo>
+                    </x:Array>
+                </ListView.ItemsSource>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Description}"/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

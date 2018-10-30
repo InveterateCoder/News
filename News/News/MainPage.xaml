@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:News"
+             x:Class="News.MainPage"
+             Title="вКурсе">
+
+    <ContentPage.ToolbarItems>
+        <local:NewsToolbarItem Text="24" Description="Важное за сутки" Order="Primary"
+                               Address="https://news.yandex.ru/daily.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Мир" Description="В мире" Order="Primary"
+                               Address="https://news.yandex.ru/world.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Р-он" Order="Primary" Description="rgn" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Наука" Description="Наука" Order="Secondary"
+                               Address="https://news.yandex.ru/science.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Экономика" Description="Экономика" Order="Secondary"
+                               Address="https://news.yandex.ru/ecology.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Политика" Description="Политика" Order="Secondary"
+                               Address="https://news.yandex.ru/politics.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Финансы" Description="Финансы" Order="Secondary"
+                               Address="https://news.yandex.ru/finances.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Интернет" Description="Интернет" Order="Secondary"
+                               Address="https://news.yandex.ru/internet.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Гаджеты" Description="Гаджеты" Order="Secondary"
+                               Address="https://news.yandex.ru/gadgets.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Технологии" Description="Технологии" Order="Secondary"
+                               Address="https://news.yandex.ru/computers.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Авто" Description="Авто" Order="Secondary"
+                               Address="https://news.yandex.ru/auto.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Здоровье" Description="Здоровье" Order="Secondary"
+                               Address="https://news.yandex.ru/health.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Культура" Description="Культура" Order="Secondary"
+                               Address="https://news.yandex.ru/culture.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Спорт" Description="Спорт" Order="Secondary"
+                               Address="https://news.yandex.ru/sport.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Игры" Description="Игры" Order="Secondary"
+                               Address="https://news.yandex.ru/games.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Религия" Description="Религия" Order="Secondary"
+                               Address="https://news.yandex.ru/religion.rss" Clicked="OnToolbarItemClicked"/>
+    </ContentPage.ToolbarItems>
+    <ListView  x:Name="listView" HasUnevenRows="True" SeparatorVisibility="None"
+                  IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}"
+                  RefreshCommand="{Binding RefreshCommand}" ItemTapped="listView_ItemTapped" ItemsSource="{Binding Items}">
+        <ListView.Header>
+            <StackLayout Spacing="0">
+                <Label x:Name="label" Text="{Binding Title}" VerticalOptions="Start" HorizontalTextAlignment="Center"
+               BackgroundColor="Black" FontSize="Medium" TextColor="White"/>
+                <Label Text="{Binding TimeStamp, StringFormat='Дата обновления: {0:MM/dd/yyyy - HH:mm}'}"
+               BackgroundColor="Black" TextColor="WhiteSmoke" FontSize="Micro" HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Frame OutlineColor="Black" Margin="10,5" Padding="10,5">
+                        <StackLayout>
+                            <Label Text="{Binding Title}" TextColor="White" FontSize="Medium"
+                                   HorizontalTextAlignment="Center" BackgroundColor="DimGray"/>
+                            <Label Text="{Binding Description}" FontSize="Medium"
+                                   HorizontalTextAlignment="Center"/>
+                        </StackLayout>
+                    </Frame>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
