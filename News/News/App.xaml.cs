@@ -14,7 +14,7 @@ namespace News
                 Properties.Add("Inf", NewsInfo.Serialize(new NewsInfo { Address = "https://news.yandex.ru/daily.rss", Description = "Важное за сутки" }));
             if(!Properties.ContainsKey("Rgn"))
                 Properties.Add("Rgn", NewsInfo.Serialize(new NewsInfo { Address = "https://news.yandex.ru/Barnaul/index.rss", Description = "Алтайский край" }));
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage()) {BarTextColor = Color.Black};
         }
 
         protected override void OnStart()

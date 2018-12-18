@@ -14,7 +14,7 @@
         <local:NewsToolbarItem Text="Наука" Description="Наука" Order="Secondary"
                                Address="https://news.yandex.ru/science.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Экономика" Description="Экономика" Order="Secondary"
-                               Address="https://news.yandex.ru/ecology.rss" Clicked="OnToolbarItemClicked"/>
+                               Address="https://news.yandex.ru/business.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Политика" Description="Политика" Order="Secondary"
                                Address="https://news.yandex.ru/politics.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Финансы" Description="Финансы" Order="Secondary"
