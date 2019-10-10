@@ -1,42 +1,51 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:android ="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:News"
              x:Class="News.MainPage"
              Title="вКурсе">
-
+    
     <ContentPage.ToolbarItems>
-        <local:NewsToolbarItem Text="24" Description="Важное за сутки" Order="Primary"
-                               Address="https://news.yandex.ru/daily.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Глав" Description="Главное" Order="Primary"
+                               Address="https://news.yandex.ru/index.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Мир" Description="В мире" Order="Primary"
                                Address="https://news.yandex.ru/world.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Р-он" Order="Primary" Description="rgn" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Наука" Description="Наука" Order="Secondary"
                                Address="https://news.yandex.ru/science.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Экономика" Description="Экономика" Order="Secondary"
-                               Address="https://news.yandex.ru/business.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Происшествия" Description="Происшествия" Order="Secondary"
+                               Address="https://news.yandex.ru/incident.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Политика" Description="Политика" Order="Secondary"
                                Address="https://news.yandex.ru/politics.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Экономика" Description="Экономика" Order="Secondary"
+                               Address="https://news.yandex.ru/business.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Финансы" Description="Финансы" Order="Secondary"
                                Address="https://news.yandex.ru/finances.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Путешествия" Description="Путешествия" Order="Secondary"
+                               Address="https://news.yandex.ru/travels.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Технологии" Description="Технологии" Order="Secondary"
+                               Address="https://news.yandex.ru/computers.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Интернет" Description="Интернет" Order="Secondary"
                                Address="https://news.yandex.ru/internet.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Гаджеты" Description="Гаджеты" Order="Secondary"
                                Address="https://news.yandex.ru/gadgets.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Технологии" Description="Технологии" Order="Secondary"
-                               Address="https://news.yandex.ru/computers.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Авто" Description="Авто" Order="Secondary"
-                               Address="https://news.yandex.ru/auto.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Здоровье" Description="Здоровье" Order="Secondary"
-                               Address="https://news.yandex.ru/health.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Культура" Description="Культура" Order="Secondary"
-                               Address="https://news.yandex.ru/culture.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Спорт" Description="Спорт" Order="Secondary"
-                               Address="https://news.yandex.ru/sport.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Космос" Description="Космос" Order="Secondary"
+                               Address="https://news.yandex.ru/cosmos.rss" Clicked="OnToolbarItemClicked"/>
         <local:NewsToolbarItem Text="Игры" Description="Игры" Order="Secondary"
                                Address="https://news.yandex.ru/games.rss" Clicked="OnToolbarItemClicked"/>
-        <local:NewsToolbarItem Text="Религия" Description="Религия" Order="Secondary"
-                               Address="https://news.yandex.ru/religion.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Киберспорт" Description="Киберспорт" Order="Secondary"
+                               Address="https://news.yandex.ru/cyber_sport.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Кино" Description="Кино" Order="Secondary"
+                               Address="https://news.yandex.ru/movies.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Музыка" Description="Музыка" Order="Secondary"
+                               Address="https://news.yandex.ru/music.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Авто" Description="Авто" Order="Secondary"
+                               Address="https://news.yandex.ru/auto.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Транспорт" Description="Транспорт" Order="Secondary"
+                               Address="https://news.yandex.ru/vehicle.rss" Clicked="OnToolbarItemClicked"/>
+        <local:NewsToolbarItem Text="Спорт" Description="Спорт" Order="Secondary"
+                               Address="https://news.yandex.ru/sport.rss" Clicked="OnToolbarItemClicked"/>
     </ContentPage.ToolbarItems>
     <ListView  x:Name="listView" HasUnevenRows="True" SeparatorVisibility="None"
                   IsPullToRefreshEnabled="True" IsRefreshing="{Binding IsRefreshing}"

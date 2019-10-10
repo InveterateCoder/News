@@ -1,11 +1,10 @@
-﻿
-namespace News
+﻿namespace News
 {
     public struct NewsInfo
     {
         public string Description { set; get; }
         public string Address { set; get; }
-        public static bool operator ==(NewsInfo left, NewsInfo right)
+        public static bool operator == (NewsInfo left, NewsInfo right)
             => string.Compare(left.Description, right.Description, false) == 0;
         public static bool operator !=(NewsInfo left, NewsInfo right)
             => !(string.Compare(left.Description, right.Description, false) == 0);
