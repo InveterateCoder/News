@@ -11,7 +11,6 @@ namespace News
 {
     class NewsViewModel : ViewModelBase
     {
-        private DateTime timeStamp;
         private RSSItem[] items;
         private string title;
         private string address;
@@ -27,11 +26,6 @@ namespace News
             get => title;
         }
         private XElement Channel { get; set; }
-        public DateTime TimeStamp
-        {
-            private set => SetProperty(ref timeStamp, value);
-            get => timeStamp;
-        }
         public async Task<bool> LoadAsync(NewsInfo info)
         {
             Title = info.Description;
@@ -48,12 +42,12 @@ namespace News
         {
             RefreshCommand = new Command(execute: async() => 
             {
-                if (!await Refresh(true))
+                if (!await Refresh())
                     Device.BeginInvokeOnMainThread(() => ((MainPage)((NavigationPage)Application.Current.MainPage).RootPage).Exit());
             }, canExecute: () => !IsRefreshing);
         }
         public ICommand RefreshCommand { private set; get; }
-        private async Task<bool> Refresh(bool refCommand = false)
+        private async Task<bool> Refresh()
         {
             WebRequest request = WebRequest.Create(address);
             XDocument doc = null;
@@ -71,19 +65,12 @@ namespace News
                 return false;
             }
             Channel = doc.Element(XName.Get("rss")).Element(XName.Get("channel"));
-            XElement lastBuildDate = Channel.Element(XName.Get("lastBuildDate"));
-            DateTimeOffset timeOffset = DateTimeOffset.Parse(lastBuildDate.Value);
-            DateTime timeStamp = timeOffset.DateTime + timeOffset.Offset;
-            if(!refCommand || timeStamp!=TimeStamp)
+            if (Channel == null)
+                throw new NullReferenceException();
+            Items = Channel.Elements(XName.Get("item")).Select((XElement element) =>
             {
-                if (Channel == null)
-                    throw new NullReferenceException();
-                Items = Channel.Elements(XName.Get("item")).Select((XElement element) =>
-                {
-                    return new RSSItem(element);
-                }).ToArray();
-            }
-            TimeStamp = timeStamp;
+                return new RSSItem(element);
+            }).ToArray();
             IsRefreshing = false;
             return true;
         }
